@@ -435,6 +435,7 @@ public class MainClass {
 		
 		System.out.println("Would you like to lookup an element by symbol (symbol)?\n" + "Would you like to calculate half-lives (halflife)?");
 		String choice = scanner.nextLine();
+		scanner.close();
 		
 		if(choice.equalsIgnoreCase("symbol")) {
 			symbol();
@@ -458,6 +459,8 @@ public class MainClass {
 		
 		System.out.println("To find an element, enter it's name, symbol, atomic number, or atomic weight: ");
 		String dataInput = scanner.nextLine();
+		
+		scanner.close();
 		
 		Element data = null;
 		
@@ -504,6 +507,8 @@ public class MainClass {
 		System.out.println("Go back to main menu? (Y/N): ");
 		String goBack = scanner.nextLine();
 		
+		scanner.close();
+		
 		if(goBack.equalsIgnoreCase("Y")) {
 			mainMenu();
 		}else {
@@ -517,6 +522,8 @@ public class MainClass {
 		System.out.println("Go back to main menu? (Y/N): ");
 		String goBack = scanner.nextLine();
 		
+		scanner.close();
+		
 		if(goBack.equalsIgnoreCase("Y")) {
 			mainMenu();
 		}else {
@@ -529,6 +536,8 @@ public class MainClass {
 		
 		System.out.println("Grams of radioactive isotope: ");
 		String gramspre = scanner.nextLine();
+		
+		scanner.close();
 		
 		if(!isDouble(gramspre)) {
 			System.out.println("Your amount of grams must be a double!");
